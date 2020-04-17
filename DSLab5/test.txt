@@ -1,0 +1,48 @@
+Contents of XML file
+<note>
+<test>Sample</test>
+<note>Data</note>
+</note>
+
+
+Contents of XML file
+<note>
+<ID>1002</ID>
+<Name>Data Structure</Name>
+<Day>Tuesday</Day>
+</note>
+
+
+
+
+Contents of XML file
+<note>
+<ID>1002</ID>
+<Name>Data Structure</Name>
+</Lecturer>Ang<Lecturer>
+</note>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
