@@ -1,0 +1,41 @@
+Lab 6 
+
+Q1 trick
+String#split() expects a regular expression as the first argument and | is a control character in regex.
+
+To make regex parser understand that you mean to split by the literal |, you need to pass \| to the regex parser. 
+But \ is a control character in Java string literals. 
+So, to make Java compiler understand that you want to pass \| to the regex parser, you need to pass "\\|" to the String#split() method.
+
+from stackoversflow
+
+Q2
+Solution : Create a Queue of queues where each queue stores specific type
+	   of product(same product code).
+
+Q4
+Beware of brackets
+Integer[] temp = {Integer.parseInt("100",Integer.parseInt("20"))};
+System.out.println(temp[0]);
+
+This code yields the result of 400 instead of 100 because of misplace of brackets
+
+Queue<String> temp = new LinkedList<>();
+Queue<String> copy = temp;
+temp.add("1");
+both queue will add "1" coz queue is pass by reference
+
+Instead, do this
+Queue<String> temp = new LinkedList<>();
+Queue<String> copy = new LinkedList<>(temp);
+//This will create a totally different new queue
+//The following is from stackoverflow 
+In a one liner:
+
+new LinkedList<>(myQueue);
+
+Since Queue extends Collection, and collections have a constructor that takes another Collection, this is a quick way to do a shallow clone.
+
+Substitute LinkedList with your own Queue implementation if you wish.
+
+Also, read the javadocs. They have all the answers.
